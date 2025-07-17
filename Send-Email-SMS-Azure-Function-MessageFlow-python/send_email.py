@@ -28,8 +28,9 @@ def get_config(req: func.HttpRequest):
         }
     }
 
-def main(req: func.HttpRequest) -> func.HttpResponse:
+def sendEmailHttpTrigger(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Processing Email send request.')
+    
     try:
         req_body = req.get_json()
     except ValueError:
