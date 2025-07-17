@@ -58,22 +58,20 @@ namespace SendEmailMessageflowApp.Services
                     Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping
                 });
 
-                // Log the payload
+                // Log Payload
                 _logger.LogInformation("Email API Request Payload: {Payload}", jsonPayload);
 
                 // Create HTTP content
                 var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
 
-                // Log request details
+                // Log Request details
                 _logger.LogInformation("Sending HTTP request to: https://api.messageflow.com/v2.1/email");
                 _logger.LogInformation("Request headers: Authorization={Auth}, Application-Key={Key}, Content-Type=application/json", 
                     authorization?.Substring(0, Math.Min(10, authorization?.Length ?? 0)) + "...", 
                     applicationKey?.Substring(0, Math.Min(10, applicationKey?.Length ?? 0)) + "...");
                 
                 HttpResponseMessage response;
-             
-                // Send request to real API
-                _logger.LogInformation("Attempting to send request to API...");
+
                 try
                 {
                     response = await _httpClient.PostAsync("https://api.messageflow.com/v2.1/email", content);
@@ -103,11 +101,11 @@ namespace SendEmailMessageflowApp.Services
                 
                 var responseContent = await response.Content.ReadAsStringAsync();
 
-                // Log the response
+                // Log Response
                 _logger.LogInformation("Email API Response Status: {StatusCode}", response.StatusCode);
                 _logger.LogInformation("Email API Response Content: {Content}", responseContent);
 
-                // Parse response
+                // Parse Response
                 try
                 {
                     var apiResponse = JsonSerializer.Deserialize<EmailApiResponse>(responseContent, new JsonSerializerOptions
@@ -214,6 +212,7 @@ namespace SendEmailMessageflowApp.Services
     }
 
     // Email API Response Models
+
     public class EmailApiResponse
     {
         public EmailData[]? Data { get; set; }

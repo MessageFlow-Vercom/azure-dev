@@ -58,22 +58,19 @@ namespace SendSmsMessageflowApp.Services
                     WriteIndented = true
                 });
 
-                // Log the payload
+                // Log Payload
                 _logger.LogInformation("SMS API Request Payload: {Payload}", jsonPayload);
 
                 // Create HTTP content
                 var content = new StringContent(jsonPayload, Encoding.UTF8, "application/json");
 
-                // Log request details
+                // Log Request details
                 _logger.LogInformation("Sending HTTP request to: https://api.messageflow.com/v2.1/sms");
                 _logger.LogInformation("Request headers: Authorization={Auth}, Application-Key={Key}, Content-Type=application/json", 
                     authorization?.Substring(0, Math.Min(10, authorization?.Length ?? 0)) + "...", 
                     applicationKey?.Substring(0, Math.Min(10, applicationKey?.Length ?? 0)) + "...");
                 
                 HttpResponseMessage response;
-             
-                // Send request to real API
-                _logger.LogInformation("Attempting to send request to API...");
 
                 try
                 {
@@ -104,11 +101,11 @@ namespace SendSmsMessageflowApp.Services
                 
                 var responseContent = await response.Content.ReadAsStringAsync();
 
-                // Log the response
+                // Log Response
                 _logger.LogInformation("SMS API Response Status: {StatusCode}", response.StatusCode);
                 _logger.LogInformation("SMS API Response Content: {Content}", responseContent);
 
-                // Parse response
+                // Parse Response
                 try
                 {
                     var apiResponse = JsonSerializer.Deserialize<SmsApiResponse>(responseContent, new JsonSerializerOptions
@@ -189,6 +186,7 @@ namespace SendSmsMessageflowApp.Services
     }
 
     // API Response Models
+
     public class SmsApiResponse
     {
         public SmsData[]? Data { get; set; }
