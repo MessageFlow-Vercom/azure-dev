@@ -116,23 +116,44 @@ Follow these steps to create your App Service resources and publish your project
 - Open Visual Studio Code from your project's root directory. If prompted, select Yes, I trust the authors.
 - Locate the Azure icon in the left-hand toolbar. Select it to bring up the Azure Tools for VS Code extension.
 
+<img width="668" height="287" alt="pythonapp1" src="https://github.com/user-attachments/assets/10243f70-ff9c-4a3f-b6c6-2177991fe96f" />
+
 > If you do not see the Azure Tools icon, make sure you have the Azure Tools extension for VS Code installed.
 
 In the Azure Tools extension for VS Code:
 
 - Find the RESOURCES section and select your subscription.
 - Select + (Create Resource...)
-- Choose the Create App Service Web App... option.
+- Choose the "Create App Service Web App..." option.
+
+  <img width="948" height="131" alt="python2" src="https://github.com/user-attachments/assets/2d0b73b5-f8ee-4069-b44c-48e45841b3f7" />
+
 - Select the region where you want to host your web app.
 - Enter the name messageflow-python-webapp-XYZ for this web app, where XYZ is any three unique characters. When deployed, this name is used as your app name.
 - Select the runtime stack for the application. In this project, select Python 3.13.
 - Select the App Service plan (pricing tier) for this web app. The App Service plan controls how many resources (CPU/memory) are available to your app and how much you pay.
+
+<img width="1230" height="148" alt="pythonapp3" src="https://github.com/user-attachments/assets/24f021f6-bdf0-4e5f-ac32-9414e08be1a8" />
+
 - Go to the RESOURCES section and select your subscription.
 - Inside App Services right click on messageflow-python-webapp-XYZ web app and select "Deploy to web app..."
+
+<img width="510" height="250" alt="pythonapp4" src="https://github.com/user-attachments/assets/a9924382-b475-45a4-8913-8942886911e8" />
+
 - Select the quickstart folder you are working in as the one to deploy.
 - Select resource (messageflow-python-webapp-XYZ for this web app)
 - Answer Yes to update your build configuration and improve deployment performance.
 - When the deployment is complete, a notification will appear in the lower right corner of VS Code. You can use this notification to browse to your web app (click "Browse Website" button)
+
+<img width="1232" height="400" alt="pythonapp5" src="https://github.com/user-attachments/assets/f35dd2de-4b64-4569-8dd1-3fc55ac5f26e" />
+
+A web page will open, and if everything worked correctly, you will see the message:
+
+```
+MessageFlow SMS/Email API app is running. Use POST /sms or POST /email endpoints.
+```
+
+> You can copy the web page URL and use it during testing with Postman
 
 ---
 
