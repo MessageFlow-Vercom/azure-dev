@@ -1,0 +1,275 @@
+# ===========================================
+# SECURITY-SENSITIVE FILES
+# ===========================================
+
+# Configuration files with API keys and secrets
+config.json
+secrets.json
+api-keys.json
+*config*.json
+*secret*.json
+*key*.json
+*token*.json
+*credential*.json
+*auth*.json
+
+# MessageFlow API specific files
+*messageflow*.json
+*messageflow*.config
+*api*.config
+*rest*.config
+
+# Environment variables with sensitive data
+.env
+.env.*
+**/.env
+**/.env.*
+
+# Azure Functions configuration
+local.settings.json
+local.settings.*.json
+host.json.user
+
+# Azure deployment secrets
+.azure/
+*.azurewebsites.net.json
+
+# Keep example/template files
+!config.example.json
+!secrets.example.json
+!local.settings.example.json
+!*template*
+!*example*
+
+# ===========================================
+# PYTHON FILES
+# ===========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ===========================================
+# AZURE FUNCTIONS SPECIFIC
+# ===========================================
+
+# Azure Functions
+local.settings.json
+.funcignore
+.python_packages
+
+# Azure artifacts
+__blobstorage__
+__queuestorage__
+__azurite_db*__.json
+
+# Locally installed Python packages
+lib/
+
+# ===========================================
+# IDE AND OS FILES
+# ===========================================
+
+# VS Code
+.vscode/
+
+# PyCharm / IntelliJ
+.idea/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===========================================
+# LOGS AND TEMPORARY FILES
+# ===========================================
+
+# Logs that might contain sensitive data
+*.log
+logs/
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+*.bak
+*.backup
+
+# ===========================================
+# CERTIFICATES AND KEYS
+# ===========================================
+
+# Security certificates and keys
+secrets/
+credentials/
+keys/
+certs/
+certificates/
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.pfx
+
+# ===========================================
+# DEPLOYMENT AND CONTAINERIZATION
+# ===========================================
+
+# Docker
+.dockerignore
+Dockerfile*
+
+# Deployment artifacts
+*.zip
+*.tar.gz
+
+# ===========================================
+# INFRASTRUCTURE AS CODE
+# ===========================================
+
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+.terraform/
+
+# Kubernetes
+*.kubeconfig

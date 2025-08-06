@@ -123,16 +123,18 @@ class EmailService:
             # Parse response
             if response.status_code == 200:
                 try:
+                    # Try to parse the response, but don't fail if it doesn't match our model
                     response_data = response.json()
                     if isinstance(response_data, dict):
                         return EmailResponse(
                             success=True,
-                            message=response_data.get('message', 'SMS sent successfully'),
+                            message=response_data.get('message', 'Email sent successfully'),
                             response_content=response_content
                         )
                 except (json.JSONDecodeError, KeyError) as e:
-                    self.logger.warning(f"Cant parse response to EmailResponse model, but HTTP status is success: {e}")
+                    self.logger.warning(f"Failed to parse response to EmailResponse model, but HTTP status is success: {e}")
                 
+                # If parsing failed or returned unexpected format, create success response
                 return EmailResponse(
                     success=True,
                     message="Email sent successfully",

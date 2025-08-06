@@ -97,6 +97,7 @@ class SmsService:
             # Parse response
             if response.status_code == 200:
                 try:
+                    # Try to parse the response, but don't fail if it doesn't match our model
                     response_data = response.json()
                     if isinstance(response_data, dict):
                         return SmsResponse(
@@ -105,8 +106,9 @@ class SmsService:
                             response_content=response_content
                         )
                 except (json.JSONDecodeError, KeyError) as e:
-                    self.logger.warning(f"Can not parse response to SmsResponse model, but HTTP status is success: {e}")
+                    self.logger.warning(f"Failed to parse response to SmsResponse model, but HTTP status is success: {e}")
                 
+                # If parsing failed or returned unexpected format, create success response
                 return SmsResponse(
                     success=True,
                     message="SMS sent successfully",
