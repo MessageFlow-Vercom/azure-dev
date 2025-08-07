@@ -71,6 +71,8 @@ Repository: [github.com/MessageFlow-Vercom/azure-dev](https://github.com/Message
   - `RestApiAuthorization`
   - `RestApiApplicationKey`
 
+<img width="997" height="619" alt="dotnetfunccred" src="https://github.com/user-attachments/assets/437f7fd8-ecfa-4b31-8752-ba4e376fd20e" />
+
 ---
 
 ## Running the function locally
@@ -84,7 +86,7 @@ Repository: [github.com/MessageFlow-Vercom/azure-dev](https://github.com/Message
 func start
 ```
 
-<IMG>
+<img width="1229" height="267" alt="dotnetfunc1" src="https://github.com/user-attachments/assets/1cabc7ba-1dd6-4859-bb5d-c5646d0fcfac" />
 
 ---
 
@@ -108,7 +110,7 @@ Respond to the prompts as follows:
 
 In the Azure: Activity Log panel, the Azure extension shows the status of individual resources as they're created in Azure.
 
-<img>
+<img width="1229" height="207" alt="dotnetfunc2" src="https://github.com/user-attachments/assets/1513f7d4-1c8d-4129-a4ad-d0cf0c7f92f2" />
 
 # Deploy the project to Azure:
 
@@ -116,6 +118,9 @@ In the Azure: Activity Log panel, the Azure extension shows the status of indivi
 - Search for and select: Azure Functions: Deploy to Function App.
 - Select the function app you just created. When prompted about overwriting previous deployments, select Deploy to deploy your function code to the new function app resource.
 - When deployment is completed, select View Output to view the creation and deployment results, including the Azure resources that you created. If you miss the notification, select the bell icon in the lower-right corner to see it again.
+
+<img width="1229" height="207" alt="dotnetfunc3" src="https://github.com/user-attachments/assets/4566b4c2-a7bf-4afc-b8e8-fc0f24aeefc3" />
+
 
 Run the function in Azure
 
