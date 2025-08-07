@@ -107,6 +107,8 @@ To run the application locally:
    func start
    ```
 
+<img width="732" height="197" alt="pythonfunc1" src="https://github.com/user-attachments/assets/a9c367dc-7e5b-40fc-afca-55491eeee7b0" />
+
 ---
 
 ## Publish and test your function
@@ -117,6 +119,8 @@ Follow these steps to publish your project:
 - Open Visual Studio Code from your project's root directory. If prompted, select Yes, I trust the authors.
 - In Visual Studio Code, select View > Command Palette to open the Command Palette.
 - Search for and select: Azure Functions: Create Function App in Azure.
+
+<img width="1222" height="204" alt="pythonfunc2" src="https://github.com/user-attachments/assets/d756ce2e-2367-424c-b7a2-7267bbf777c4" />
 
 Respond to the prompts as follows:
 
@@ -129,7 +133,7 @@ Respond to the prompts as follows:
 
 In the Azure: Activity Log panel, the Azure extension shows the status of individual resources as they're created in Azure.
 
-<img>
+<img width="1234" height="224" alt="pythonfunc3" src="https://github.com/user-attachments/assets/0170a166-3a59-4789-b798-04439a376c8c" />
 
 # Deploy project to Azure:
 
@@ -138,10 +142,14 @@ In the Azure: Activity Log panel, the Azure extension shows the status of indivi
 - Select the function app you just created. When prompted about overwriting previous deployments, select Deploy to deploy your function code to the new function app resource.
 - When deployment is completed, select View Output to view the creation and deployment results, including the Azure resources that you created. If you miss the notification, select the bell icon in the lower-right corner to see it again.
 
+<img width="1234" height="235" alt="pythonfunc4" src="https://github.com/user-attachments/assets/eab87653-ad64-49f7-b28e-ccc8499a82b4" />
+
 Run the function in Azure
 
 - In Visual Studio Code, select View > Command Palette to open the Command Palette.
 - Search for and select: Azure Functions:Execute Function Now...
+- Select recently deployed function
+- Copy and paste payload 
 
 ---
 
