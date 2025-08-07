@@ -72,6 +72,20 @@ You can copy the appsettings.example.json file, rename it to appsettings.json, a
 
 ---
 
+## Running the web app locally
+
+To run the application locally:
+
+1. Go to the application directory:
+2. Run app:
+```
+dotnet run
+```
+
+<img width="1224" height="155" alt="Zrzut ekranu 2025-08-7 o 14 00 58" src="https://github.com/user-attachments/assets/899044c6-232f-460a-b459-1b735f04b4f7" />
+
+---
+
 ## Publish and test your web app
 
 Follow these steps to create your App Service resources and publish your project:
@@ -93,6 +107,9 @@ Respond to the prompts as follows:
 - Select the system on which you want to run the application
 - Select a pricing tier for your App Service Plan (or create a new one).
 
+<img width="1230" height="124" alt="Zrzut ekranu 2025-08-7 o 13 54 26" src="https://github.com/user-attachments/assets/2b440f19-7b42-4ac7-b16a-f72e89983832" />
+
+
 Once the web app is created, you will see a notification in Visual Studio Code.
 
 After the web app is created, you can publish your project:
@@ -110,6 +127,8 @@ Respond to the prompts as follows:
 - Once the deployment is complete, you will see a notification in Visual Studio Code indicating that the deployment was successful.
 
 When publishing completes, select Browse Website in the notification and select Open when prompted or in Visual Studio Code, select View > Command Palette to open the Command Palette and search for and select Azure App Service: Browse Website.
+
+<img width="1230" height="190" alt="Zrzut ekranu 2025-08-7 o 13 54 33" src="https://github.com/user-attachments/assets/3f0c04a2-522c-402c-ac70-7aa68e980c3f" />
 
 ---
 
@@ -195,11 +214,6 @@ When publishing completes, select Browse Website in the notification and select 
 - Body:
   - Choose `raw → JSON`
   - Paste a sample payload
-
-### Optional: Environment Variables in Postman
-
-- Add `Authorization` and `ApplicationKey` as environment variables
-- Use them as `{{Authorization}}` and `{{ApplicationKey}}`
 
 ---
 
