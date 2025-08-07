@@ -1,0 +1,10 @@
+name: messageflow-sms-email-app
+
+infra:
+  provider: bicep
+
+services:
+  web:
+    project: ./
+    host: appservice
+    language: dotnet
