@@ -16,8 +16,8 @@
       "applicationUrl": "http://localhost:5042",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "RestApi__Authorization": "your-messageflow-authorization-token-here",
-        "RestApi__ApplicationKey": "your-messageflow-application-key-here"
+        "RestApi__ApplicationKey": "your-messageflow-application-key-here",
+        "RestApi__Authorization": "your-messageflow-authorization-token-here"
       }
     },
     "https": {
@@ -27,8 +27,8 @@
       "applicationUrl": "https://localhost:7040;http://localhost:5042",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "RestApi__Authorization": "your-messageflow-authorization-token-here",
-        "RestApi__ApplicationKey": "your-messageflow-application-key-here"
+        "RestApi__ApplicationKey": "your-messageflow-application-key-here",
+        "RestApi__Authorization": "your-messageflow-authorization-token-here"
       }
     },
     "IIS Express": {

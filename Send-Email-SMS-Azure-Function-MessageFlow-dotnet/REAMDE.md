@@ -28,14 +28,22 @@ Complete integration of email and SMS delivery using Azure ASP.NET function app 
 
 ### 2. Generate an API Key
 
-- Navigate to the “API Settings” tab
+- Navigate to the “Account”->“Settings”->“API” tab
 - Click “New API Key”
-- Name the key and set permissions
+- Name the key and set permissions, you need to select options “Transactional e-mail” and “Transactional SMS”
 - Save the following values:
-  - `Authorization`
   - `ApplicationKey`
+  - `Authorization`
 
 > Keep your credentials secure — they will be needed in code!
+
+---
+
+### 3. Additional requirements
+
+To send emails we require two more things:
+- domain in the FROM field must be verified. You can do this in “Email”->“Common settings”->“Senders authorization”. More information you can read [here](https://docs.messageflow.com/technical-support-center/senders-authorization/how-to-authorize-senders-in-messageflow/domains-authorization)
+- your personal "smtpAccount", you can get it from the MessageFlow application. Navigate to “Email”->“Email API”->“Settings”->“SMTP Accounts”
 
 ---
 
@@ -56,8 +64,8 @@ Repository: [github.com/MessageFlow-Vercom/azure-dev](https://github.com/Message
 
 ```json
 {
-    "RestApiAuthorization": "your-auth-key",
-    "RestApiApplicationKey": "your-app-key"
+    "RestApiApplicationKey": "your-app-key",
+    "RestApiAuthorization": "your-auth-key"
   }
 }
 ```
@@ -68,8 +76,8 @@ Repository: [github.com/MessageFlow-Vercom/azure-dev](https://github.com/Message
 
 - Go to: App Service → Configuration → Environment variables
 - Add two variables:
-  - `RestApiAuthorization`
   - `RestApiApplicationKey`
+  - `RestApiAuthorization`
 
 <img width="997" height="619" alt="dotnetfunccred" src="https://github.com/user-attachments/assets/437f7fd8-ecfa-4b31-8752-ba4e376fd20e" />
 

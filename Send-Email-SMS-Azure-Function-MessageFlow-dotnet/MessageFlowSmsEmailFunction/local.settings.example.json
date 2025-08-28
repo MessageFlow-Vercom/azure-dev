@@ -3,7 +3,7 @@
   "Values": {
     "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
-    "RestApiAuthorization": "YOUR_API_AUTHORIZATION_TOKEN",
-    "RestApiApplicationKey": "YOUR_APPLICATION_KEY"
+    "RestApiApplicationKey": "YOUR_APPLICATION_KEY",
+    "RestApiAuthorization": "YOUR_API_AUTHORIZATION_TOKEN"
   }
 }

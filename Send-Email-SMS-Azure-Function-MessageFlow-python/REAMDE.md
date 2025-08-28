@@ -33,14 +33,22 @@ If you want to use the SMS messaging function, select the MessageFlowSmsFunction
 
 ### 2. Generate an API Key
 
-- Navigate to the “API Settings” tab
+- Navigate to the “Account”->“Settings”->“API” tab
 - Click “New API Key”
-- Name the key and set permissions
+- Name the key and set permissions, you need to select options “Transactional e-mail” and “Transactional SMS”
 - Save the following values:
-  - `Authorization`
   - `ApplicationKey`
+  - `Authorization`
 
 > Keep your credentials secure — they will be needed in code!
+
+---
+
+### 3. Additional requirements
+
+To send emails we require two more things:
+- domain in the FROM field must be verified. You can do this in “Email”->“Common settings”->“Senders authorization”. More information you can read [here](https://docs.messageflow.com/technical-support-center/senders-authorization/how-to-authorize-senders-in-messageflow/domains-authorization)
+- your personal "smtpAccount", you can get it from the MessageFlow application. Navigate to “Email”->“Email API”->“Settings”->“SMTP Accounts”
 
 ---
 
@@ -62,8 +70,8 @@ Repository: [github.com/MessageFlow-Vercom/azure-dev](https://github.com/Message
 ```json
 {
   "Values": {
-    "RestApi__Authorization": "your-authorization-key",
-    "RestApi__ApplicationKey": "your-application-key"
+    "RestApi__ApplicationKey": "your-application-key",
+    "RestApi__Authorization": "your-authorization-key"
   }
 }
 ```
@@ -75,8 +83,8 @@ You can copy the local.settings.example.json file, rename it to local.settings.j
 ```json
 {
   "rest_api": {
-    "authorization": "your-messageflow-authorization-token-here",
-    "application_key": "your-messageflow-application-key-here"
+    "application_key": "your-messageflow-application-key-here",
+    "authorization": "your-messageflow-authorization-token-here"
   }
 }
 ```
@@ -87,8 +95,8 @@ You can copy the config.example.json file, rename it to config.json, and fill it
 
 - Go to: App Service → Configuration → Application Settings
 - Add two variables:
-  - `Authorization`
   - `ApplicationKey`
+  - `Authorization`
 
 ---
 
