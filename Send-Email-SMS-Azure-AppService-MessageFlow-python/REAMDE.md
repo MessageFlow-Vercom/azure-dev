@@ -34,13 +34,18 @@ Complete integration of email and SMS delivery using Azure Python web app and th
 
 > Keep your credentials secure — they will be needed in code!
 
+> If you received "Creating API keys impossible until account approved by customer service office" error it might be that your account has not yet been activated. If this process takes longer than 3 hours, please contact our support team to verify your identity.
+
 ---
 
 ### 3. Additional requirements
 
 To send emails we require two more things:
+
 - domain in the FROM field must be verified. You can do this in “Email”->“Common settings”->“Senders authorization”. More information you can read [here](https://docs.messageflow.com/technical-support-center/senders-authorization/how-to-authorize-senders-in-messageflow/domains-authorization)
 - your personal "smtpAccount", you can get it from the MessageFlow application. Navigate to “Email”->“Email API”->“Settings”->“SMTP Accounts”
+
+To send SMS messages, you need to add a sender ID. You can do this in “SMS”->“Common settings”->“Sender IDs”. More information you can read [here](https://docs.messageflow.com/communication-channels-in-the-panel/sms/sms-common-settings/sender-ids)
 
 ---
 
