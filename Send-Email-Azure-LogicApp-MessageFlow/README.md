@@ -251,7 +251,7 @@ Azure generates the schema for the request data you entered. In practice, you ca
 ### 8. Testing
 
 - On the Logic App designer top toolbar, select "Run" -> "Run with payload".
-- Paste the following sample JSON payload in "Body" field, and then click "Run".
+- Paste the following sample JSON payload in "Body" field, replace “user1@example.com” with the address to which you want to send the test message and then click "Run".
 
 ```json
 {
