@@ -60,7 +60,7 @@ To send emails we require two more things:
 <img width="1059" height="675" alt="" src="https://github.com/user-attachments/assets/c42f419e-d2b4-4e43-b975-0cf2526e305e" />
 
 
-- On the "Add a trigger" screen under Built-in tools, select Request, and on the next screen select When a HTTP request is received.
+- On the "Add a trigger" screen under "Built-in tools", select "Request", and on the next screen select "When a HTTP request is received".
 
 <img width="631" height="393" alt="" src="https://github.com/user-attachments/assets/99aa91e0-eee1-4d39-9d99-3180d2f9055c" />
 <img width="631" height="393" alt="" src="https://github.com/user-attachments/assets/10ce3f12-237f-4d0b-96ef-65a86c0b99d9" />
@@ -68,12 +68,12 @@ To send emails we require two more things:
 
 The trigger appears on the designer canvas.
 
-- On the When a HTTP request is received screen, select "Use sample payload to generate schema" below the "Request Body JSON Schema" text field
+- On the "When a HTTP request is received screen", select "Use sample payload to generate schema" below the "Request Body JSON Schema" text field
 
 <img width="1036" height="605" alt="" src="https://github.com/user-attachments/assets/70a6fc5b-0ee6-4fa0-b457-e79818a6348c" />
 
 
-- Paste the following code in the Enter or paste a sample JSON payload screen, and then select Done.
+- Paste the following code in the Enter or paste a sample JSON payload screen, and then select "Done".
 
 ```json
 {
@@ -137,7 +137,7 @@ Azure generates the schema for the request data you entered. In practice, you ca
 
 - On the Logic App designer top toolbar, select "Save".
 
-- The generated HTTP URL now appears under HTTP URL on the "When a HTTP request is received" screen. Select the copy icon to copy the URL to use later.
+- The generated "HTTP URL" now appears under "HTTP URL" on the "When a HTTP request is received" screen. Select the copy icon to copy the URL to use later.
 
 <img width="628" height="417" alt="" src="https://github.com/user-attachments/assets/daa81dbc-588f-4fb5-a020-0a8b9a5ad9ca" />
 
@@ -227,7 +227,7 @@ Azure generates the schema for the request data you entered. In practice, you ca
 <img width="621" height="272" alt="body" src="https://github.com/user-attachments/assets/47028923-8515-444f-a41f-63e1f7133de1" />
 
 
-- On the Logic App designer top toolbar, select Save.
+- On the Logic App designer top toolbar, select "Save".
 
 ---
 
@@ -239,12 +239,12 @@ Azure generates the schema for the request data you entered. In practice, you ca
 
 
 - In "Status Code" field press “/”, select the “Insert dynamic content” button, and select "Status Code"
-- Do the same with the body field
+- Do the same with the "Body" field
 
 <img width="881" height="448" alt="" src="https://github.com/user-attachments/assets/82d032d5-52a7-4ed6-a928-cc0a5838df23" />
 
 
-- On the Logic App designer top toolbar, select Save.
+- On the Logic App designer top toolbar, select "Save".
 
 ---
 
