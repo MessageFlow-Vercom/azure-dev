@@ -8,7 +8,6 @@ This tutorial shows how to send emails using the MessageFlow REST API from an Po
 
 - MessageFlow account ([Register here](https://app.messageflow.com/register))
 - API key with appropriate permissions (email)
-- An [Power Apps account](https://make.powerapps.com)
 - An [Power Automate account](https://make.powerautomate.com)
 
 ---
@@ -194,6 +193,8 @@ To send emails we require two more things:
 
 - Click "Test" in the top-right corner and choose "Manually".
 - Provide sample values for each parameter to verify the flow works correctly.
+
+<img width="276" height="369" alt="tests" src="https://github.com/user-attachments/assets/06ebceb3-c9f0-4c7e-b7a8-38be5714783a" />
 
 ---
 
