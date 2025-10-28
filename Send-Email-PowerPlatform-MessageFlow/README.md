@@ -72,7 +72,8 @@ To send emails we require two more things:
   - Name: `htmlContent`, Type: `Text`
   - Name: `textContent`, Type: `Text`
 
-    IMG 1
+    <img width="625" height="601" alt="img1" src="https://github.com/user-attachments/assets/add451a4-d24e-4b15-bec9-e15dea5c9c9f" />
+
 
     > This paameters list includes only the required fields: subject, smtpAccount, from, to, and content. If you want to add more fields, check the endpoint documentation [here](https://dev.messageflow.com/emails#post-v2.1-email)
 
@@ -139,6 +140,8 @@ To send emails we require two more things:
       }
     }
     ```
+    
+    <img width="617" height="495" alt="img2" src="https://github.com/user-attachments/assets/ae458333-df34-4da6-825a-6c1d2fe1cef2" />
 
     > This payload includes only the required fields: subject, smtpAccount, from, to, and content. If you want to add more fields, check the endpoint documentation [here](https://dev.messageflow.com/emails#post-v2.1-email)
 
@@ -163,6 +166,9 @@ To send emails we require two more things:
     }
   }
   ```
+
+  <img width="617" height="652" alt="img3" src="https://github.com/user-attachments/assets/7f5ba0d0-e9d6-4cd3-9a2a-212aaa052cb5" />
+
 
 - On the Power Automate designer top toolbar, select "Save".
 
