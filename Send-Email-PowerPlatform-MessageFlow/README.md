@@ -130,8 +130,8 @@ To send emails we require two more things:
       },
       "to": [
         {
-          "email": "@{triggerBody()?['email']}",
-          "name": "@{triggerBody()?['text_2']}"
+          "email": "@{triggerBody()?['email_1']}",
+          "name": "@{triggerBody()?['text_3']}"
         }
       ],
       "content": {
@@ -141,7 +141,8 @@ To send emails we require two more things:
     }
     ```
     
-    <img width="617" height="495" alt="img2" src="https://github.com/user-attachments/assets/ae458333-df34-4da6-825a-6c1d2fe1cef2" />
+    <img width="617" height="496" alt="img2_poprawione" src="https://github.com/user-attachments/assets/15f9f50f-f0e1-468a-865a-00c7dbf1e5fc" />
+
 
     > This payload includes only the required fields: subject, smtpAccount, from, to, and content. If you want to add more fields, check the endpoint documentation [here](https://dev.messageflow.com/emails#post-v2.1-email)
 
