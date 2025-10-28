@@ -57,9 +57,7 @@ To send emails we require two more things:
 
 ### 5. Initialize variables
 
-- In the flow editor, click on "When Power Apps calls a flow (V2)" action
-- Select the "Initialize variable" action.
-
+- In the flow editor, click on "When Power Apps calls a flow (V2)" action\
 - Add text inputs:
 
   - Name: `subject`, Type: `Text`
