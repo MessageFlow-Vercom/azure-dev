@@ -183,6 +183,8 @@ To send emails we require two more things:
   - Name: `success`, Type: "Yes/No", Value: press the “/” key, select “Insert dynamic content,” and choose `success` from "Parse JSON"
   - Name: `message`, Type: "Text", Value: press the “/” key, select “Insert dynamic content,” and choose `message` from "Parse JSON"
 
+  <img width="617" height="270" alt="img4" src="https://github.com/user-attachments/assets/9a3d87dc-0a71-4b68-8761-736ebd0b3529" />
+
 - On the Power Automate designer top toolbar, select "Save".
 
 ---
