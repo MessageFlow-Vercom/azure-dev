@@ -273,4 +273,4 @@ You should see the result of the query to the MessageFlow API along with the res
 
 ## Contributors
 
-- Created by: MessageFlow
+- Created by: [MessageFlow](https://dev.messageflow.com)
