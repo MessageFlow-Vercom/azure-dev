@@ -168,10 +168,6 @@ To send emails we require two more things:
 
 ### 8. Add HTTP Request Action
 
----
-
-### 8. Add HTTP Request Action
-
 - In the flow editor, click "Add a new step".
 - Select the "HTTP" action.
 - Configure the "HTTP" action as follows:
@@ -335,4 +331,4 @@ or add the appropriate fields in the application and insert their values.
 
 ## Contributors
 
-- Created by: MessageFlow
+- Created by: [MessageFlow](https://dev.messageflow.com)
