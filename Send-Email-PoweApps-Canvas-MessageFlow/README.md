@@ -306,7 +306,7 @@ If you already have an application open your Canvas App
         Set(
             varEmailResponse;
             SendEmailviaAzureFunction.Run(
-                "Test email from Canvas App",
+                "Test email from Canvas App";
                 "1.test.smtp";
                 "emailfrom@example.com";
                 "Sender email name";
@@ -321,6 +321,8 @@ If you already have an application open your Canvas App
         Notify("error"; NotificationType.Error)
     )
 ```
+
+> Note that differences in notation, particularly regarding the value separator (comma or semicolon), are mainly due to the regional settings of the operating system. For example, in some countries, the separator is a semicolon rather than a comma.
 
 or add the appropriate fields in the application and insert their values.
 
