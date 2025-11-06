@@ -1,6 +1,6 @@
-# Deploy a Node.js web app + MessageFlow API
+# Deploy a PHP web app + MessageFlow API
 
-Complete integration of email and SMS delivery using Azure Node.js web app and the MessageFlow API.
+Complete integration of email and SMS delivery using Azure PHP web app and the MessageFlow API.
 
 ---
 
@@ -8,10 +8,11 @@ Complete integration of email and SMS delivery using Azure Node.js web app and t
 
 - MessageFlow account ([Register here](https://app.messageflow.com/register))
 - API key with appropriate permissions (SMS, email)
-- An [Azure account](https://azure.microsoft.com/free/dotnet) with an active subscription.
+- An [Azure account](https://azure.microsoft.com/free/) with an active subscription.
 - [Visual Studio Code](https://www.visualstudio.com/downloads)
 - [Azure Tools extension pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) installed and be signed into Azure from VS Code.
-- [Node.js 18 or higher](https://nodejs.org/) installed locally.
+- [PHP 8.1 or higher](https://www.php.net/downloads) installed locally.
+- [Composer](https://getcomposer.org/) (required for autoloading)
 
 ---
 
@@ -32,7 +33,7 @@ Complete integration of email and SMS delivery using Azure Node.js web app and t
   - `ApplicationKey`
   - `Authorization`
 
-> Keep your credentials secure — they will be needed in code!
+> Keep your credentials secure  they will be needed in code!
 
 > If you received "Creating API keys impossible until account approved by customer service office" error it might be that your account has not yet been activated. If this process takes longer than 3 hours, please contact our support team to verify your identity.
 
@@ -62,7 +63,11 @@ Repository: [github.com/MessageFlow-Vercom/azure-dev](https://github.com/Message
 
 ## Secure Credential Storage
 
-### Locally (`config.json`)
+The application supports two configuration methods:
+
+### 1. Local Development (`config.json`):
+
+For local development, create a `config.json` file:
 
 ```json
 {
@@ -75,22 +80,27 @@ Repository: [github.com/MessageFlow-Vercom/azure-dev](https://github.com/Message
 
 You can copy the config.example.json file, rename it to config.json, and fill it in with your MessageFlow credentials.
 
-### In Azure Portal (Recommended for Production)
+### 2. Azure Production (Application Settings):
 
-Azure App Service automatically provides the `PORT` environment variable. You need to add your MessageFlow credentials:
+To configure credentials in Azure:
 
 - Go to: App Service -> Settings -> Environment variables
-- Add two variables:
-  - `REST_API_AUTHORIZATION` = your-authorization-key
-  - `REST_API_APPLICATION_KEY` = your-application-key
+- Add two environment variables:
+  - **Name:** `ApplicationKey` **Value:** your MessageFlow application key
+  - **Name:** `Authorization` **Value:** your MessageFlow authorization token
+- Click **Save** and wait for the app to restart
 
-**Important**: After adding configuration, restart your App Service for changes to take effect.
+**How it works:**
+
+- In Azure: The app reads credentials from environment variables (`ApplicationKey` and `Authorization`)
+- Locally: The app falls back to `config.json` if environment variables are not set
+- The app automatically detects the environment using Azure's `WEBSITE_SITE_NAME` variable
 
 ---
 
 ## Running the web app locally
 
-To run the application locally (with Express):
+To run the application locally with PHP built-in server:
 
 1. Go to the application folder:
 
@@ -98,44 +108,29 @@ To run the application locally (with Express):
 cd MessageFlowSmsEmailApp
 ```
 
-2. Install Node.js dependencies:
-
-```bash
-npm install
-```
-
-3. Configure credentials (choose one method):
-
-**Option A: Using config.json (Recommended for local development)**
+2. Copy the example configuration:
 
 ```bash
 cp config.example.json config.json
 ```
 
-Edit `config.json` with your MessageFlow credentials.
+3. Edit `config.json` and add your MessageFlow credentials.
 
-**Option B: Using Environment Variables**
-
-```bash
-export REST_API_AUTHORIZATION="your-authorization-key"
-export REST_API_APPLICATION_KEY="your-application-key"
-```
-
-4. Run the app:
+4. Install Composer dependencies:
 
 ```bash
-npm start
+composer install --no-dev
 ```
 
-For development with auto-reload:
+5. Start the PHP built-in web server:
 
 ```bash
-npm run dev
+php -S localhost:8000 -t .
 ```
 
-5. Browse to the application at http://localhost:3000 in a web browser.
+6. Browse to the application at http://localhost:8000 in a web browser.
 
-**Note**: The app listens on the port specified by the `PORT` environment variable, or defaults to 3000 if not set.
+> For production deployments, consider using a proper web server like Apache or Nginx with PHP-FPM.
 
 ---
 
@@ -154,38 +149,52 @@ In the Azure Tools extension for VS Code:
 - Find the RESOURCES section and select your subscription.
 - Select + (Create Resource...)
 - Choose the "Create App Service Web App..." option.
-
 - Select the region where you want to host your web app.
-- Enter the name messageflow-nodejs-webapp-XYZ for this web app, where XYZ is any three unique characters. When deployed, this name is used as your app name.
-- Select the runtime stack for the application. Node.js LTS 22 is recommended.
-- Select the App Service plan (pricing tier) for this web app. The App Service plan controls how many resources (CPU/memory) are available to your app.
+- Enter the name `messageflow-php-webapp-XYZ` for this web app, where XYZ is any three unique characters. When deployed, this name is used as your app name.
+- Select the runtime stack for the application. In this project, select **PHP 8.2** or **PHP 8.3**.
+- Select the App Service plan (pricing tier) for this web app. The App Service plan controls how many resources (CPU/memory) are available to your app and how much you pay.
+- Select the **Linux** operating system (PHP on Windows is no longer supported as of November 2022).
+
+Once created:
 
 - Go to the RESOURCES section and select your subscription.
-- Inside App Services right click on messageflow-nodejs-webapp-XYZ web app and select "Deploy to web app..."
-
-- Select the MessageFlowSmsEmailApp folder you are working in as the one to deploy.
-- Select resource (messageflow-nodejs-webapp-XYZ for this web app)
-- When prompted to update build configuration, select **Yes** to enable build automation during deployment
+- Inside App Services right click on `messageflow-php-webapp-XYZ` web app and select "Deploy to web app..."
+- Select the `MessageFlowSmsEmailApp` folder as the one to deploy.
+- Select resource (`messageflow-php-webapp-XYZ` for this web app)
 - When the deployment is complete, a notification will appear in the lower right corner of VS Code. You can use this notification to browse to your web app (click "Browse Website" button)
-
-### Configure Application Settings in Azure
-
-After deployment, you must configure your MessageFlow credentials:
-
-1. In Azure Portal, navigate to your App Service
-2. Go to **Settings** -> **Environment variables**
-3. Click **+ ADd** and add:
-   - Name: `REST_API_AUTHORIZATION`, Value: your-authorization-key
-   - Name: `REST_API_APPLICATION_KEY`, Value: your-application-key
-4. Click **Save** and then **Continue** to restart the app
 
 A web page will open, and if everything worked correctly, you will see the message:
 
 ```
-MessageFlow SMS/Email API app is running. Use POST /sms or POST /email endpoints.
+{"message":"MessageFlow SMS/Email API app is running. Use POST /sms or POST /email endpoints."}
 ```
 
 > You can copy the web page URL and use it during testing with Postman
+
+### Configure Application Settings in Azure
+
+After deployment, you need to add your MessageFlow credentials to Azure:
+
+1. Go to your App Service in the Azure Portal
+2. Navigate to: Settings -> Environment variables
+3. Add the following settings:
+   - **Name:** `ApplicationKey` **Value:** your MessageFlow application key
+   - **Name:** `Authorization` **Value:** your MessageFlow authorization token
+4. Click **Save** and wait for the app to restart
+
+**Verification:**
+After saving, browse to your app URL. You should see:
+
+```json
+{
+  "message": "MessageFlow SMS/Email API app is running. Use POST /sms or POST /email endpoints.",
+  "environment": "Azure App Service",
+  "php_version": "8.2.x",
+  "timestamp": "2025-01-05T10:30:00+00:00"
+}
+```
+
+If you see `"Service configuration unavailable"` error, check that Application Settings are configured correctly.
 
 ---
 
@@ -279,7 +288,7 @@ MessageFlow SMS/Email API app is running. Use POST /sms or POST /email endpoints
 
 ## Testing with Postman
 
-### Request Setup
+### Request Setup:
 
 - Method: `POST`
 - URL:
@@ -303,56 +312,51 @@ MessageFlow SMS/Email API app is running. Use POST /sms or POST /email endpoints
 ```
 [Client Request]
       ↓
-[Azure]
+[Azure App Service - PHP]
       ↓
-[Express App - Email / SMS]
+[index.php - Routes & Validation]
+      ↓
+[EmailService / SmsService]
       ↓
 [MessageFlow API]
       ↓
 [Client Response]
 ```
 
+## PHP Requirements
+
+The application requires:
+
+- PHP 8.1 or higher
+- Composer (for PSR-4 autoloading)
+- cURL extension (for HTTP requests)
+- JSON extension (for data handling)
+
+These extensions are typically enabled by default in Azure App Service.
+
+**Note:** The application uses Composer's PSR-4 autoloader. Azure App Service automatically runs `composer install` during deployment if `composer.json` is detected.
+
 ---
 
 ## Your own solution
 
-You can also copy the SmsService or EmailService files and use them in your code.
+You can also copy the SmsService.php or EmailService.php files and use them in your code. Both services are standalone classes that only require:
+
+- A configuration array with `rest_api.authorization` and `rest_api.application_key`
+- PHP with cURL and JSON extensions
 
 ---
 
-## Project Structure
+## Troubleshooting
 
-```
-MessageFlowSmsEmailApp/
-├── app.js                    # Main Express application
-├── package.json              # Node.js dependencies and scripts
-├── config.json               # Configuration file (not in git)
-├── config.example.json       # Example configuration
-├── .gitignore                # Git ignore rules
-└── services/
-    ├── smsService.js         # SMS service implementation
-    └── emailService.js       # Email service implementation
-```
+1. **"REST API authorization is missing in configuration"**
 
----
+   - In Azure: Add `Authorization` and `ApplicationKey` to Application Settings
+   - Locally: Verify `config.json` has the correct structure with `rest_api` object
 
-## Available Scripts
-
-- `npm start` - Start the application
-- `npm run dev` - Start with nodemon for development (auto-reload)
-
----
-
-## Dependencies
-
-### Production Dependencies:
-
-- **express**: Fast, unopinionated web framework for Node.js
-- **axios**: Promise-based HTTP client for API requests
-
-### Development Dependencies:
-
-- **nodemon**: Auto-reload utility for development
+2. **Environment Detection Issues**
+   - Check the health endpoint response - it shows whether app detected Azure or Local environment
+   - Azure detection uses the `WEBSITE_SITE_NAME` environment variable
 
 ---
 

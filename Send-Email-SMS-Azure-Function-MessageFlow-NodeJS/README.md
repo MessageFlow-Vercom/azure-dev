@@ -95,6 +95,7 @@ MessageFlowSmsFunction/            # SMS function (deploy separately)
 ├── local.settings.example.json    # Example configuration
 └── .gitignore                     # Git ignore rules
 ```
+
 ---
 
 ## Secure Credential Storage
@@ -131,11 +132,13 @@ Create a `local.settings.json` file (copy from `local.settings.example.json`):
 1. Clone the repository and navigate to the directory of the function you want to use:
 
 **For Email function:**
+
 ```bash
 cd Send-Email-SMS-Azure-Function-MessageFlow-NodeJS/MessageFlowEmailFunction
 ```
 
 **For SMS function:**
+
 ```bash
 cd Send-Email-SMS-Azure-Function-MessageFlow-NodeJS/MessageFlowSmsFunction
 ```
@@ -165,6 +168,7 @@ node --version
 ```
 
 2. Start Azurite (local Azure Storage emulator):
+
    - In VS Code, press F1 and run: **Azurite: Start**
    - Or install and run manually: [Azurite Documentation](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite)
 
@@ -214,8 +218,8 @@ Respond to the prompts as follows:
 - Create new or select a resource group
 - Select resource authentication type: **Managed identity** (most secure option)
 - Create new or select a user assigned identity
-- Create new or select a storage account 
-> Depending on your choices, some of the above questions may not appear or may appear in a different order.
+- Create new or select a storage account
+  > Depending on your choices, some of the above questions may not appear or may appear in a different order.
 
 The Azure extension shows the status of individual resources as they're created in Azure in the **Azure: Activity Log** panel.
 
@@ -230,8 +234,8 @@ The Azure extension shows the status of individual resources as they're created 
 ### Configure Environment Variables in Azure
 
 1. Go to Azure Portal -> Your Function App
-2. Navigate to **Configuration -> Application settings**
-3. Add two new application settings:
+2. Navigate to **Settings -> Environment variables**
+3. Add two new application variables:
    - `RestApiApplicationKey` = your MessageFlow application key
    - `RestApiAuthorization` = your MessageFlow authorization key
 4. Click **Save**
@@ -358,14 +362,14 @@ This implementation uses the **Azure Functions Node.js v4 programming model**, w
 Functions are registered using the `app` object from `@azure/functions`:
 
 ```javascript
-const { app } = require('@azure/functions');
+const { app } = require("@azure/functions");
 
-app.http('MessageFlowEmailHttpTrigger', {
-  methods: ['POST'],
-  authLevel: 'anonymous',
+app.http("MessageFlowEmailHttpTrigger", {
+  methods: ["POST"],
+  authLevel: "anonymous",
   handler: async (request, context) => {
     // Function logic here
-  }
+  },
 });
 ```
 
@@ -374,9 +378,9 @@ app.http('MessageFlowEmailHttpTrigger', {
 The `context` object provides structured logging and metadata:
 
 ```javascript
-context.log('Info message');      // Information logging
-context.warn('Warning message');  // Warning logging
-context.error('Error message');   // Error logging
+context.log("Info message"); // Information logging
+context.warn("Warning message"); // Warning logging
+context.error("Error message"); // Error logging
 ```
 
 ### Request/Response Handling
@@ -392,7 +396,7 @@ const data = JSON.parse(body);
 return {
   status: 200,
   body: JSON.stringify({ success: true }),
-  headers: { 'Content-Type': 'application/json' }
+  headers: { "Content-Type": "application/json" },
 };
 ```
 
@@ -414,7 +418,7 @@ You can also copy the `emailService.js` or `smsService.js` file and use them in 
 Example usage:
 
 ```javascript
-const EmailService = require('./services/emailService');
+const EmailService = require("./services/emailService");
 const emailService = new EmailService();
 
 const result = await emailService.sendEmailAsync(emailRequest, context);
@@ -438,6 +442,5 @@ const result = await emailService.sendEmailAsync(emailRequest, context);
 ---
 
 ## Contributors
-
 
 - Created by: [MessageFlow](https://dev.messageflow.com)

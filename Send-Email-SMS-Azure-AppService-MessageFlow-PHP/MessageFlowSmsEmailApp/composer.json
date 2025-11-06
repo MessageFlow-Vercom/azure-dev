@@ -1,0 +1,15 @@
+{
+    "name": "messageflow/sms-email-app",
+    "description": "MessageFlow SMS and Email API Application for Azure App Service",
+    "type": "project",
+    "require": {
+        "php": ">=8.1",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MessageFlow\\": "services/"
+        }
+    }
+}
