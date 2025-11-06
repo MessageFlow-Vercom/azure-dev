@@ -1,0 +1,27 @@
+{
+  "name": "messageflow-email-function",
+  "version": "1.0.0",
+  "description": "Azure Function for sending Email via MessageFlow API",
+  "main": "src/functions/emailFunction.js",
+  "scripts": {
+    "start": "func start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "azure",
+    "functions",
+    "messageflow",
+    "email"
+  ],
+  "author": "MessageFlow",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/functions": "^4.0.0"
+  },
+  "devDependencies": {
+    "azure-functions-core-tools": "^4.x"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

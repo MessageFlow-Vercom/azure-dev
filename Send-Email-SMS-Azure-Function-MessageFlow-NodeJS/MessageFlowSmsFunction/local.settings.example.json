@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "RestApiApplicationKey": "your-application-key-here",
+    "RestApiAuthorization": "your-authorization-key-here"
+  }
+}

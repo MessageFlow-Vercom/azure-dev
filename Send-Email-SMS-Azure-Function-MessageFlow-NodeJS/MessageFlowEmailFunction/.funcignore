@@ -1,0 +1,13 @@
+.git*
+.vscode
+local.settings.json
+test
+.DS_Store
+node_modules
+*.md
+.env
+.funcignore
+__pycache__
+.pytest_cache
+.coverage
+*.pyc
