@@ -33,7 +33,7 @@ Complete integration of email and SMS delivery using Azure PHP web app and the M
   - `ApplicationKey`
   - `Authorization`
 
-> Keep your credentials secure  they will be needed in code!
+> Keep your credentials secure — they will be needed in code!
 
 > If you received "Creating API keys impossible until account approved by customer service office" error it might be that your account has not yet been activated. If this process takes longer than 3 hours, please contact our support team to verify your identity.
 
