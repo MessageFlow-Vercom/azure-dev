@@ -1,0 +1,6 @@
+{
+  "rest_api": {
+    "application_key": "your-messageflow-application-key-here",
+    "authorization": "your-messageflow-authorization-token-here"
+  }
+}
