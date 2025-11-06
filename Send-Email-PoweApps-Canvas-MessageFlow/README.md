@@ -168,10 +168,6 @@ To send emails we require two more things:
 
 ### 8. Add HTTP Request Action
 
----
-
-### 8. Add HTTP Request Action
-
 - In the flow editor, click "Add a new step".
 - Select the "HTTP" action.
 - Configure the "HTTP" action as follows:
@@ -310,7 +306,7 @@ If you already have an application open your Canvas App
         Set(
             varEmailResponse;
             SendEmailviaAzureFunction.Run(
-                "Test email from Canvas App",
+                "Test email from Canvas App";
                 "1.test.smtp";
                 "emailfrom@example.com";
                 "Sender email name";
@@ -326,6 +322,8 @@ If you already have an application open your Canvas App
     )
 ```
 
+> Note that differences in notation, particularly regarding the value separator (comma or semicolon), are mainly due to the regional settings of the operating system. For example, in some countries, the separator is a semicolon rather than a comma.
+
 or add the appropriate fields in the application and insert their values.
 
 - Click the "Save" icon in the upper right corner
@@ -335,4 +333,4 @@ or add the appropriate fields in the application and insert their values.
 
 ## Contributors
 
-- Created by: MessageFlow
+- Created by: [MessageFlow](https://dev.messageflow.com)
