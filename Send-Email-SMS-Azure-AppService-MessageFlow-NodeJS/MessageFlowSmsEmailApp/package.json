@@ -1,0 +1,36 @@
+{
+  "name": "messageflow-sms-email-app",
+  "version": "1.0.0",
+  "description": "MessageFlow SMS/Email API integration with Azure App Service - Express Generator Structure",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "messageflow",
+    "sms",
+    "email",
+    "azure",
+    "api"
+  ],
+  "author": "MessageFlow",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.10",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
