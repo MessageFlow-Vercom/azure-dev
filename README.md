@@ -8,10 +8,10 @@ Each folder is a complete integration sample and includes its own README with de
 
 The goal of this repository is to provide **ready-to-use, real-world integration templates** that help developers and teams:
 
-- Integrate MessageFlow's Email & SMS REST API with Azure  
-- Build communication workflows using serverless and web app patterns  
-- Adopt best practices for API credentials, environment variables, and secure sending  
-- Quickly test MessageFlow capabilities in Azure  
+- Integrate MessageFlow's Email & SMS REST API with Azure
+- Build communication workflows using serverless and web app patterns
+- Adopt best practices for API credentials, environment variables, and secure sending
+- Quickly test MessageFlow capabilities in Azure
 - Use these samples as templates for production applications.
 
 ## 📦 Integrations Overview
@@ -36,7 +36,7 @@ Explore MessageFlow solutions on Microsoft Marketplace:
 
 [MessageFlow - Email API for developers](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/vercom.email-api-for-developers?tab=Overview)
 
-[MessageFlow - Transactional and Marketing SMS](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/vercom.dmessageflow-sms-transactional-offer-main?tab=Overview)
+[MessageFlow - Transactional and Marketing SMS](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/vercom.messageflow-sms-transactional-offer-main?tab=Overview)
 
 [MessageFlow - Enterprise Email API](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/vercom.messageflow-email-api-transactional-2?tab=Overview)
 
@@ -60,8 +60,6 @@ Explore MessageFlow solutions on Microsoft Marketplace:
 - **MessageFlow Documentation:** https://docs.messageflow.com/
 - **MessageFlow Website:** https://messageflow.com/
 
----
-
 ## 🛠 Reporting Issues
 
 If you encounter a problem while using any of the samples, please include:
@@ -72,8 +70,6 @@ If you encounter a problem while using any of the samples, please include:
 - Any relevant **logs**, error output, or environment details
 
 Your feedback helps us maintain reliable and up-to-date integration examples.
-
----
 
 ## 🤝 Contributing
 
