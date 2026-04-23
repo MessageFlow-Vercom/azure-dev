@@ -1,6 +1,14 @@
 # Integrate MessageFlow API with Azure Logic App
 
-This tutorial shows how to send emails using the MessageFlow REST API from an Azure Logic App.
+This tutorial shows how to send emails using the MessageFlow REST API from an Azure Logic App. It provides a complete low-code example of building a transactional email workflow using HTTP triggers and MessageFlow API calls.
+
+---
+
+## 🔗 Azure Marketplace
+
+If you are deploying MessageFlow through Azure Marketplace, you can find our Email API offer here:
+
+👉 **MessageFlow – Email API for Developers** ([See more here](https://marketplace.microsoft.com/en-us/product/saas/vercom.email-api-for-developers?tab=Overview))
 
 ---
 
@@ -274,3 +282,14 @@ You should see the result of the query to the MessageFlow API along with the res
 ## Contributors
 
 - Created by: [MessageFlow](https://dev.messageflow.com)
+
+## About MessageFlow
+
+MessageFlow is a developer-friendly communication platform designed to help teams deliver secure, high-quality transactional messaging at scale.
+
+With our Email API you can:
+
+- Send fast, reliable transactional emails from any system
+- Track delivery, errors and engagement in real time
+- Improve deliverability with verified domains and optimized infrastructure
+- Simplify integration with transparent pricing and predictable performance.

@@ -4,6 +4,14 @@ Complete integration of email and SMS delivery using Azure Node.js web app and t
 
 ---
 
+## 🔗 Azure Marketplace
+
+If you are deploying MessageFlow through Azure Marketplace, you can find our Mix & Match - Email & SMS Communication offer here:
+
+👉 **MessageFlow – Mix & Match - Email & SMS Communication** ([See more here](https://marketplace.microsoft.com/en-us/product/saas/vercom.mix-and-match?tab=Overview))
+
+---
+
 ## Requirements
 
 - MessageFlow account ([Register here](https://app.messageflow.com/register))
@@ -359,3 +367,14 @@ MessageFlowSmsEmailApp/
 ## Contributors
 
 - Created by: [MessageFlow](https://dev.messageflow.com)
+
+## About MessageFlow
+
+MessageFlow is a developer-friendly communication platform designed to help teams deliver secure, high-quality transactional messaging at scale.
+
+With our Email & SMS API you can:
+
+- Send fast, reliable transactional emails from any system
+- Track delivery, errors and engagement in real time
+- Improve deliverability with verified domains and optimized infrastructure
+- Simplify integration with transparent pricing and predictable performance.
