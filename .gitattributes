@@ -1,0 +1,24 @@
+# --- C# as main ---
+*.cs linguist-weight=1.0
+*.csproj linguist-weight=1.0
+*.sln linguist-weight=1.0
+
+# --- Python ---
+*.py linguist-weight=0.6
+
+# --- PHP ---
+*.php linguist-weight=0.4
+
+# --- JavaScript ---
+*.js linguist-weight=0.2
+*.jsx linguist-weight=0.2
+*.mjs linguist-weight=0.2
+
+# --- other ---
+*.md linguist-documentation
+*.json linguist-generated
+*.yml linguist-generated
+*.yaml linguist-generated
+*.txt linguist-generated
+*.bicep linguist-generated
+*.lock linguist-generated
