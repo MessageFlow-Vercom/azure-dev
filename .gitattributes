@@ -23,9 +23,4 @@
 *.bicep linguist-generated
 *.lock linguist-generated
 
-Send-Email-SMS-Azure-Function-MessageFlow-NodeJS/** linguist-detectable=false
-Send-Email-SMS-Azure-AppService-MessageFlow-NodeJS/**/routes/** linguist-detectable=false
 Send-Email-SMS-Azure-Function-MessageFlow-Java/** linguist-detectable=false
-Send-Email-SMS-Azure-AppService-MessageFlow-Java/**/controllers/** linguist-detectable=false
-Send-Email-SMS-Azure-AppService-MessageFlow-Java/**/models/** linguist-detectable=false
-Send-Email-SMS-Azure-AppService-MessageFlow-Java/**/*Application.java linguist-detectable=false
